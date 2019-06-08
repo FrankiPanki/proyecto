@@ -1,0 +1,11 @@
+
+  <svg [attr.width]="ancho" [attr.height]="largo">
+  
+    <circle [attr.cx]="cx2" [attr.cy]="cy2" [attr.r]="radio2" [attr.stroke]="borde2" 
+    [attr.stroke-width]="sancho2" style="fill-opacity: .0; " class="base" />
+    <circle [attr.cx]="calculaX()" [attr.cy]="calculaY()" [attr.r]="radio" [attr.stroke]="borde" 
+    [attr.stroke-width]="sancho" style="fill-opacity: .0; " class="generatriz" />
+    <path id="recta" [attr.d]='calculaRecta()' stroke="purple" stroke-width="2" fill="none" class="generatriz" />
+    <path id="curva" [attr.d]='curva' stroke="purple" stroke-width="2" fill="none" class="curva" />
+  </svg>
+

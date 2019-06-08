@@ -1,0 +1,45 @@
+.ojo{
+    width: 40px;
+    height: 40px;
+    background: url('../../assets/info/ver.svg');
+    cursor: pointer;
+}
+.visible{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+
+
+#contenedor{
+    width: 100%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 40% 60%;
+    grid-template-areas: "escena info"
+                         "escena ojos";
+}
+
+#escena{
+    grid-row-start: escena;
+    grid-column-start: escena;
+    grid-row-end: escena;
+    grid-column-end: escena;
+    justify-self: center;
+    padding-top: 5%;
+}
+#info{
+    grid-row-start: info;
+    grid-column-start: info;
+    grid-row-end: info;
+    grid-column-end: info;
+    padding-top: 2%;
+
+}
+#ojos{
+    grid-row-start: ojos;
+    grid-column-start: ojos;
+    grid-row-end: ojos;
+    grid-column-end: ojos;
+}

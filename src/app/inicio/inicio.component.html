@@ -1,0 +1,163 @@
+<ul class="nav justify-content-center" id="nav" #nav>
+    <li class="nav-item">
+        <a class="nav-link" (click)="scrol(6)">^</a>
+      </li>
+  <li class="nav-item">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Ruletas</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem (click)="scrol(0)">Ruletas</button>
+        <button ngbDropdownItem (click)="scrol(1)">Seno</button>
+        <button ngbDropdownItem (click)="scrol(2)">Coseno</button>
+      </div>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="scrol(3)">Cicloide</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="scrol(4)">Epicicloide</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="scrol(5)">Hipocicloide</a>
+  </li>
+
+</ul>
+
+
+
+<div #ruleta id="ruleta">
+  <h1>RULETAS</h1>
+  Una ruleta es una curva plana que se genera en el plano como la trayectoria de un punto sobre una curva generatriz que
+  rueda sobre otra curva basem, que está fija. Este rodamiento es de manera tangencial y sin deslizarse sobre la base.
+  Cuando la curva generatriz es una circunferencia, las ruletas también son llamadas curvas cíclicas.
+  <br> <br>
+  Un ejemplo de curvas que se genera son la gráficas de <span>y=cosx</span> y de <span>y=senx</span>. La curva es un
+  círculo de radio 1 con centro en el <span>eje X</span>, y la base es una recta con ecuación <span>y=-1</span>
+  <br> <br>
+  El movimiento de una curva sobre un plano fue estudiado más generalmente por W.H Besant en 1869. Sus precursores, para
+  casos más particulares, fueron Dürer en 1525, D. Bernoulli, La Hire, Desargues, Leibniz, Newton, Maxwell etc.
+  <br><br>
+  En este <a href="https://babel.hathitrust.org/cgi/pt?id=coo.31924059413827;view=1up;seq=9
+">sitio</a> puedes encontrar el artículo "Notes on Roulettes and Glissette" de Besant
+
+  <br><br>
+  En la siguientes tres opciones presentaremos tres curvas que son también ejemplos de ruletas: la cicloide, la
+  epicicloide y la hipocicloide
+
+</div>
+
+<div #seno>
+  <app-carriba>
+    <ng-container titulo>
+      <h2>SENO</h2>
+    </ng-container>
+    <ng-container tex>
+      <h3>SENO</h3>
+      La parametrizacion de la curva es:
+      <br><span>y=cost</span>
+      <br><span>x=t</span>
+      <br>La cordenadas del circulo generatriz es:
+      <br><span>(cost+t,1)</span>
+    </ng-container>
+    <ng-container imagen>
+      <div id="dcontenedor">
+        <app-planos ancho=1400 largo=300 opcion="animacion">
+          <app-seno #curva ancho=1400 largo=300></app-seno>
+        </app-planos>
+      </div>
+    </ng-container>
+  </app-carriba>
+</div>
+
+
+
+<div #coseno>
+  <app-carriba>
+    <ng-container titulo>
+      <h2>COSENO</h2>
+    </ng-container>
+    <ng-container tex>
+      <h3>COSENO</h3>
+      La parametrizacion de la curva es:
+      <br><span>y=sent</span>
+      <br><span>x=t</span>
+      <br>La cordenadas del circulo generatriz es:
+      <br><span>(cost+t,1)</span>
+    </ng-container>
+    <ng-container imagen>
+      <div id="dcontenedor">
+        <app-planos ancho=1400 largo=300 opcion="animacion">
+          <app-coseno #curva ancho=1400 largo=300></app-coseno>
+        </app-planos>
+      </div>
+    </ng-container>
+  </app-carriba>
+</div>
+
+
+<div #cicloide>
+    <app-carriba>
+      <ng-container titulo>
+        <h2>CICLOIDE</h2>
+      </ng-container>
+      <ng-container tex>
+        <h3>CICLOIDE</h3>
+        Esta curva es una cicloide, que es la trayectoria que describe un punto de una circunferencia de radio r que rueda sin resbalar sobre una recta, en ese caso, eje X. Podemos pensar a esta curva como la curva que veríamos si fijamos un foquito a un extremo de un rayo de una rueda de una bicicleta que recorre un camino recto en la oscuridad.
+        <br><br>
+        Esta curva no era conocida por los griegos y fue nombrada por Galileo del griego kuklos.
+        Fue estudiada por Charles Bouvelles en 1501. Mersenne et Galileo en 1599, Roberval en 1636. Toricelli en 1944, Huygens, Bernoulli y Newton. Este último demostró una de las propiedades más importantes de esta curva al resolver dos problemas planteados por Bernoulli en la Royal Society fundada en Londres en 1669, en el Gresham College de Londres.
+        <br><br>
+        La propiedad a la que nos referimos es la de ser la braquistócrona, es decir la curva que cumple con la siguiente propiedad: Dados dos puntos A y B sobre un plano vertical, determine la trayectoria de una partícula M a lo largo de la cual, descendiendo por su propio peso, M se moverá de A a B en el menor tiempo posible.
+        <br><br>
+        Huygens había  descubierto que las cicloides son tautocrona, es decir que el tiempo que una partícula tarda en recorrer la distancia desde cualquier punto de la cicloide hasta el punto más bajo de la curva es siempre el mismo, no importa si lo iniciamos en la parte más alta de la curva, en la mistas o desde un punto muy cercano a la base.
+        
+      </ng-container>
+      <ng-container imagen>
+        <div id="dcontenedor">
+          <app-planos ancho=1400 largo=300 opcion="animacion">
+            <app-cicloide #curva ancho=1400 largo=300></app-cicloide>
+          </app-planos>
+        </div>
+      </ng-container>
+    </app-carriba>
+  </div>
+
+
+<br><br>
+  <div #epicicloide>
+      <app-cderecho>
+        <ng-container titulo>
+          <h2>EPICICLOIDE</h2>
+        </ng-container>
+        <ng-container tex>
+          <h3>EPICICLOIDE</h3>
+          Una epicicloide es la curva que describe la trayectoria de un punto de una circunferencia que gira sin resbalar o deslizarse sobre una circunferencia de base
+        </ng-container>
+        <ng-container imagen>
+          <div id="dcontenedor">
+            <app-planos ancho=500 largo=500 opcion="animacion">
+              <app-epicicloide #curva ancho=500 largo=500></app-epicicloide>
+            </app-planos>
+          </div>
+        </ng-container>
+      </app-cderecho>
+    </div>
+
+  <div #hipocicloide>
+      <app-cizquierdo>
+        <ng-container titulo>
+          <h2>HIPOCICLOIDE</h2>
+        </ng-container>
+        <ng-container tex>
+          <h3>HIPOCICLOIDE</h3>
+          Una Hipocicloide es la curva que describe la trayectoria de un punto de una circunferencia que gira sin resbalar o deslizarse al interior de otra circunferencia de base.        </ng-container>
+        <ng-container imagen>
+          <div id="dcontenedor">
+            <app-planos ancho=500 largo=500 opcion="animacion">
+              <app-hipocicloide #curva ancho=500 largo=500></app-hipocicloide>
+            </app-planos>
+          </div>
+        </ng-container>
+      </app-cizquierdo>
+    </div>

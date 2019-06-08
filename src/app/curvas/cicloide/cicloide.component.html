@@ -1,0 +1,8 @@
+
+  <svg [attr.width]="ancho" [attr.height]="largo">
+  
+    <circle [attr.cx]="calculaX()" [attr.cy]="calculaY()" [attr.r]="radio" [attr.stroke]="borde" 
+    [attr.stroke-width]="sancho" style="fill-opacity: .0; " class="generatriz"/>
+    <path id="recta" [attr.d]='calculaRecta()' stroke="blue" stroke-width="2" fill="none" class="generatriz" />
+    <path id="curva" [attr.d]='curva' stroke="blue" stroke-width="2" fill="none" class="curva" />
+  </svg>

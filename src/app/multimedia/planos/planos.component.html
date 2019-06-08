@@ -1,0 +1,44 @@
+<div id="tele">
+
+  <div id="flat" [ngStyle]="{'width':flatAncho, 'height':flatLargo}">
+
+
+
+    <svg [attr.height]="largo" [attr.width]="ancho" id="uno">
+      <path id="y" [attr.d]='ejey' stroke="red" stroke-width="1" fill="none" />
+      <path id="x" [attr.d]="ejex" stroke="black" stroke-width="1" fill="none" />
+    </svg>
+    <ng-content id="dos" ></ng-content>
+
+  </div>
+
+
+
+  <div [ngSwitch]="opcion">
+    <div *ngSwitchCase="'animacion'">
+      <button type="button" class="btn btn-primary" (click)="parar()">Para</button>
+      <button type="button" class="btn btn-success" (click)="iniciar()">Inicia</button>
+    </div>
+    <div *ngSwitchCase="'control'">
+      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group" role="group" aria-label="Third group" id="t">
+          <span class="badge badge-pill badge-light">t</span>
+          <button type="button" class="btn btn-secondary" (mouseup)="pmas()" (mousedown)="mas()">+</button>
+          <button type="button" class="btn btn-secondary" (mouseup)="pmenos()" (mousedown)="menos()">-</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="Third group" id="t">
+          <span class="badge badge-pill badge-light">r</span>
+          <button type="button" class="btn btn-secondary" (mouseup)="rpmas()" (mousedown)="rmas()">+</button>
+          <button type="button" class="btn btn-secondary" (mouseup)="rpmenos()" (mousedown)="rmenos()">-</button>
+        </div>
+      <div *ngIf="r2" class="btn-group" role="group" aria-label="Third group" id="t">
+        <span class="badge badge-pill badge-light">R</span>
+        <button type="button" class="btn btn-secondary" (mouseup)="rvpmas()" (mousedown)="rvmas()">+</button>
+        <button type="button" class="btn btn-secondary" (mouseup)="rvpmenos()" (mousedown)="rvmenos()">-</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>

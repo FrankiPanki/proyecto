@@ -1,0 +1,39 @@
+#nav {
+    background-color: rgba(255, 255, 255, .8);
+}
+
+img{
+    position: absolute;
+    top: 20%;
+    transform: translateX(600%) rotate(180deg);
+    width: 10%;
+}
+
+#inicio {
+    margin: 0%;
+    width: 100vw;
+    height: 100vh;
+}
+
+#cicloide {
+    margin: 0%;
+    padding-top: 1%;
+    width: 100vw;
+    height: 100vh;
+}
+#epicicloides {
+    margin: 0%;
+    padding-top: 1%;
+    width: 100vw;
+    height: 100vh;
+}
+#hipocicloides1 {
+    margin: 0%;
+    padding-top: 1%;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+

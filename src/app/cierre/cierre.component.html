@@ -1,0 +1,64 @@
+<div id="contenedor">
+  <div id="escena">
+    <div [ngSwitch]="choice">
+      <app-planos ancho=700 largo=500 opcion="control" r2="si" #plano>
+        <app-cicloide *ngSwitchCase="'cicloide'" #curva ancho=700 largo=500></app-cicloide>
+        <app-epicicloide *ngSwitchCase="'epicicloide'" #curva ancho=700 largo=500></app-epicicloide>
+        <app-hipocicloide *ngSwitchCase="'hipocicloide'" #curva ancho=700 largo=500></app-hipocicloide>
+      </app-planos>
+    </div>
+  </div>
+  <div id="info">
+
+    <ngb-tabset>
+      <ngb-tab>
+        <ng-template ngbTabTitle ><span (click)="cambio(0)"> cicloide</span></ng-template>
+        <ng-template ngbTabContent>
+          <h3>Parametrizacion clicloide </h3>
+          <p>
+              (x(t), y(t))=r(t-sent),r(1-cost)
+          </p>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab >
+          <ng-template ngbTabTitle ><span (click)="cambio(1)">epicicloide</span></ng-template>
+
+        <ng-template ngbTabContent>
+            <h3>Parametrizacion epicicloide </h3>
+
+          <p>
+              (x(t), y(t))=r(t-sent),r(1-cost)
+          </p>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab >
+          <ng-template ngbTabTitle ><span (click)="cambio(2)">hipocicloide</span></ng-template>
+
+        <ng-template ngbTabContent>
+            <h3>Parametrizacion hipocicloide </h3>
+
+          <p>
+              (x(t), y(t))=r(t-sent),r(1-cost)
+          </p>
+        </ng-template>
+      </ngb-tab>
+
+    </ngb-tabset>
+  </div>
+  <div id="ojos">
+    <h3>Componentes</h3>
+    <div class="card" style="width: 18rem;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item visible">
+          <div id="ojo1" class="ojo" ojo="si"></div><span>generatriz</span>
+        </li>
+        <li class="list-group-item visible">
+          <div id="ojo2" class="ojo" ojo="si"></div>base
+        </li>
+        <li class="list-group-item visible">
+          <div id="ojo3" class="ojo" ojo="si"></div>curva
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

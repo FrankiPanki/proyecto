@@ -1,0 +1,141 @@
+<ul class="nav justify-content-center" id="nav" #nav>
+    <li class="nav-item">
+        <a class="nav-link" (click)="scrol(3)">^</a>
+      </li>
+ 
+  <li class="nav-item">
+    <a class="nav-link" (click)="scrol(0)">Cicloide</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="scrol(1)">Epicicloide</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="scrol(2)">Hipocicloide</a>
+  </li>
+
+</ul>
+
+
+<div #cicloide>
+    <app-carriba>
+      <ng-container titulo>
+        <h2>CICLOIDE</h2>
+      </ng-container>
+      <ng-container tex>
+        <h3>CICLOIDE</h3>
+        En la figura de arriba se ha presentado la situación que se produce un poco después de que el círculo ha empezado a rodar. Lo más natural es escoger como parámetro a t en radianes como el ángulo, pues esta corresponde al ángulo de rotación del círculo. Así que nuestro problema se reduce a expresar las coordenadas del punto P en función de t, o dicho de otro modo, encontrar una expresión tal que |OC|= media del arco PC=rt.
+          <br><br>
+          La observación crucial que hay que hacer al respecto es que la medida del segmento de recta OC, en azul, es igual a la medida del arco PC, tambien en azul, puesto que el círculo rueda sin resbalar. Ahora bien, x=|OC|- |PS|= rt-rsent y y=|Ct|-|CtS|=r-r cost, con lo que obtenemos las ecuaciones buscadas:
+          <br><br>
+          x=rt-rsent=r(t-sent) y y=r-rcost=r(1-cost)
+          <br><br>
+          Hay algo que explicar en esta parametrización. Si se observa bien, estas ecuaciones pueden verse como el resultado de sumar dos parametrizaciones distintas, pues el punto puede expresarse de la forma: (x,y)=r(t)=(rt,r)+(-rsent,rcost)=h(t)+c(t), donde h(t) corresponde a la traslación del centro de la circunferencia y c(t) a la rotación de un punto sobre la circunferencia de radio r.
+
+
+      </ng-container>
+      <ng-container imagen>
+        <div id="dcontenedor">
+          <app-planos ancho=1400 largo=300 opcion="control">
+            <app-cicloide #curva ancho=1400 largo=300></app-cicloide>
+          </app-planos>
+        </div>
+      </ng-container>
+    </app-carriba>
+  </div>
+
+
+<br><br>
+  <div #epicicloide>
+      <app-cderecho>
+        <ng-container titulo>
+          <h2>EPICICLOIDE</h2>
+        </ng-container>
+        <ng-container tex>
+          <h3>EPICICLOIDE</h3>
+          Una epicicloide es la curva que describe la trayectoria de un punto de una circunferencia que gira sin resbalar o deslizarse sobre otra circunferencia de base.
+          <br><br>
+          En este caso la circunferencia generatriz tiene un radio r y la circunferencia de base tiene radio R. Presiona el pulsador t para generar la curva. Prueba distintos valores de r y R.
+          <br><br>
+          ¿Como es la curva cuando la relación entre los radios R/r es un número entero?¿Como es la curva cuando esta relación no es un numero entero?.
+          <br><br>
+          Las circunferencias son siempre tangentes.
+          <br>Las coordenadas del centro Ct son
+          <br><br>
+          Ct=((R+r)cost,(R+r)sent) 
+          <br><br>
+          Consideremos ahora la posición del punto Pt con respecto a Ct como Pt está a una distancia de r de ct y el ángulo está retrasado pi rad, tenemos que:
+          <br>PtCt=(rcost(phi-pi),rsen(phi-pi))=(-rcosphi, .rsenphi)
+          <br><br>
+          ¿Cual es la relación entre los ángulos formados por los segmentos CtPt y el radio R y el eje X?
+          <br><br>
+          Hay algo que explicar en esta parametrización. Si se observa bien, estas ecuaciones pueden verse como el resultado de sumar dos parametrizaciones distintas, pues el punto puede expresarse de la forma: (x,y)=r(t)=(rt,r)+(-rsent,rcost)=h(t)+c(t), donde h(t) corresponde a la traslación del centro de la circunferencia y c(t) a la rotación de un punto sobre la circunferencia de radio r.
+          <br><br>
+          El ángulo phi está formado por el segmento CtPt con el radio r horizontal, depende del segmento del ángulo t, por que la longitud de los arcos en que las circunferencias han estado en contacto, por lo que 
+          <br><br>
+          Rt=r(phi-t)
+          <br><br>
+          Despejando obtenemos que phi=R+r/r  t,
+          <br>Entonces las coordenadas (x(t),y(t)) del punto Pt son:
+          <br><br>
+          x(t))=(R+r)cost-rcos(R+r/r  t) y
+          <br>y(t)=(R+r)sent-rsen(R+r/r  t)
+          <br><br>
+          Si R=2r la curva se llama nefroide
+          <br>Si R=r la curva es una cardioide
+          
+        </ng-container>
+        <ng-container imagen>
+          <div id="dcontenedor">
+            <app-planos ancho=500 largo=500 opcion="control" r2="si">
+              <app-epicicloide #curva ancho=500 largo=500></app-epicicloide>
+            </app-planos>
+          </div>
+        </ng-container>
+      </app-cderecho>
+    </div>
+
+  <div #hipocicloide>
+      <app-cizquierdo>
+        <ng-container titulo>
+          <h2>HIPOCICLOIDE</h2>
+        </ng-container>
+        <ng-container tex>
+          <h3>HIPOCICLOIDE</h3>
+          Una hipocicloide es la curva que describe la trayectoria de un punto de una circunferencia que gira sin resbalar o deslizarse en el interior de otra circunferencia base.
+          <br><br>
+          En este caso la circunferencia generatriz tiene un radio r y la circunferencia base tiene radio R. Prueba distintos valores de r y R.
+          <br><br>          
+          ¿Como es la curva cuando la relación entre los radios R/r es un número entero?
+          <br>¿Como es la curva cuando esta relación no es un número entero?
+          <br><br>          
+          Las circunferencias son siempre tangentes.
+          <br>Las coordenadas de centro Ct son:
+          <br>Ct=((R-r)cost, (R-r)sent)
+          <br><br>         
+          Consideremos ahora la posición del punto Pt con respecto a Ct como Pt está a una distancia r de Ct y el ángulo está retrasado pi rad, tenemos que:
+          <br>PtCt=(rcos(-phi),rsen(-phi))=(rcosphi, -rsenphi)
+          <br><br>         
+          ¿Cual es la relacion entre los ángulos formados entre los segmentos CtPt y el radio r entre el radio R y el eje X?
+          <br><br>         
+          El ángulo phi formado por el segmento CtPt con el radio r horizontal, depende del ángulo t, porque la longitud de los arcos en que las circunferencias han estado en contacto es la misma, por lo que
+          <br>Rt=r(phi+t)
+          <br><br>         
+          Despejando obtenemos que phi=R-r/r  t.
+          <br>Entonces las coordenadas (x(t), y(t)) del punto Pt son:
+          <br><br>         
+          x(t)=(R-r)cost+rcos(R-r/r  t) y
+          <br>y(t)=(R-r)sent+rsen(R-r/r  t).
+          <br><br>         
+          Si R=2r entero, la curva es un segmento.
+          <br>Si R=3r entero, la curva en tricuspidal.
+          <br>Si R=4r entero, la curva en una astroide.
+        </ng-container>       
+          <ng-container imagen>
+          <div id="dcontenedor">
+            <app-planos ancho=500 largo=500 opcion="control" r2="si">
+              <app-hipocicloide #curva ancho=500 largo=500></app-hipocicloide>
+            </app-planos>
+          </div>
+        </ng-container>
+      </app-cizquierdo>
+    </div>

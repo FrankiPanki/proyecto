@@ -1,0 +1,23 @@
+#flat{
+    border: solid;
+    position: relative;
+    box-sizing: content-box;
+}
+
+
+#uno{
+    position: absolute; 
+    left: 0px; 
+    top: 0px; 
+}
+
+#dos{
+
+    position: absolute; 
+    left: 0px; 
+    top: 0px; 
+}
+
+span{
+    font-size: 120%;
+}

@@ -1,0 +1,57 @@
+<ul class="nav justify-content-center" id="nav" #nav>
+  <li class="nav-item">
+    <a class="nav-link" (click)="scrol(5)">^</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="scrol(0)">Presentacion</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="scrol(1)">Cicloides</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="scrol(2)">Epiclicloides</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="scrol(3)">Hipocicloides 1</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="scrol(4)">Hipocicloides 2</a>
+  </li>
+
+
+</ul>
+
+
+<div class="jumbotron jumbotron-fluid" #inicio id="inicio">
+  <div class="container" >
+    <h1 class="display-4">Curvas ciclicas en forma parametrica</h1>
+    <img src="../../assets/info/rueda.svg" alt="" [@actual]="actual">
+    <p class="lead">Basado en la <a
+        href="http://arquimedes.matem.unam.mx/lite/2013/1.1_Un100/_Un_042_CurvasCiclicasEnFormaParametrica/index.html">siguiente</a>
+      unidad didactica creada con Arquimides</p>
+    <hr class="my-4">
+    <p>Autor: Francisco Daniel Gamez Garcia</p>
+  </div>
+</div>
+
+<div #cicloides id="cicloide">
+  <div class="embed-responsive embed-responsive-21by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/k6vXtjne5-c"></iframe>
+  </div>
+</div>
+
+<div #epicicloides id="epicicloides">
+    <div class="embed-responsive embed-responsive-21by9" id="algo">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Vuuen5-d69Q"></iframe>
+      </div>
+
+</div>
+<div #hipocicloides1 id="hipocicloides1">
+
+</div>
+<div #hipocicloides2>
+
+</div>
+<div #creditos>
+
+</div>
