@@ -2,11 +2,13 @@
     background-color: rgba(255, 255, 255, .8);
 }
 
-img{
+#rueda{
     position: absolute;
     top: 20%;
     transform: translateX(600%) rotate(180deg);
-    width: 10%;
+    width: 150px;
+    height: 150px;
+    background-image: url('../../assets/info/rueda.svg');
 }
 
 #inicio {
