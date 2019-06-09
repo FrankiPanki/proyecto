@@ -41,7 +41,6 @@ export class CierreComponent implements OnInit {
       }
     );
 
-    $('#myModal').modal('show');
 
   }
 
