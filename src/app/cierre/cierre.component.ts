@@ -14,10 +14,10 @@ export class CierreComponent implements OnInit {
   ngOnInit() {
     $(".ojo").click(function(){
       if ($(this).attr('ojo')=="si") {
-        $(this).css("background", "url('../../assets/info/ocultar.svg')");
+        $(this).css("background", "url('../../assets/ocultar.svg')");
         $(this).attr('ojo','no');
       } else {
-        $(this).css("background", "url('../../assets/info/ver.svg')");
+        $(this).css("background", "url('../../assets/ver.svg')");
         $(this).attr('ojo','si');
       }
 
