@@ -24,6 +24,12 @@ export class InicioComponent implements OnInit {
       }
     });
   }
+
+
+  ngAfterViewInit(){
+    $('#myModal').modal('show');
+  }
+
   scrol(numero: number){
     switch (numero) {
       case 0:

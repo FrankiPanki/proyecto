@@ -18,7 +18,7 @@ export class EpicicloideComponent extends Curva implements OnInit {
   }
 
   ngOnInit() {
-    this.psudoContructor(3,1);
+    this.psudoContructor(2.8,1);
 
     //circulo2 (directriz)
     this.cx2 = this.origenx;

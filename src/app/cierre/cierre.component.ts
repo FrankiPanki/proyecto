@@ -1,4 +1,4 @@
-import { Component, OnInit, ContentChild, ViewChild } from '@angular/core';
+import { Component, OnInit,  ViewChild, ViewEncapsulation } from '@angular/core';
 import { PlanosComponent } from '../multimedia/planos/planos.component';
 
 @Component({
@@ -40,6 +40,9 @@ export class CierreComponent implements OnInit {
       ()=> {this.plano.curva.showCurva();
       }
     );
+
+    $('#myModal').modal('show');
+
   }
 
 

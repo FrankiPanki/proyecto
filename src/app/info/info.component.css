@@ -2,14 +2,13 @@
     background-color: rgba(255, 255, 255, .8);
 }
 
-#rueda{
+img{
     position: absolute;
     top: 20%;
     transform: translateX(600%) rotate(180deg);
-    width: 150px;
-    height: 150px;
-    background-image: url('../../assets/info/rueda.svg');
+    width: 10%;
 }
+.nav-item{cursor: pointer;}
 
 #inicio {
     margin: 0%;
@@ -30,6 +29,12 @@
     height: 100vh;
 }
 #hipocicloides1 {
+    margin: 0%;
+    padding-top: 1%;
+    width: 100vw;
+    height: 100vh;
+}
+#hipocicloides2 {
     margin: 0%;
     padding-top: 1%;
     width: 100vw;
